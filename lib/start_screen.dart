@@ -22,7 +22,7 @@ class StartScreen extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Opacity(
-              opacity: 0.6,
+              opacity: 0.5,
               child: Image.asset(
                 'assets/images/quiz-logo.png',
                 width: 300,
