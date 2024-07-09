@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen({super.key});
@@ -20,22 +21,25 @@ class StartScreen extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Image.asset(
-              'assets/images/quiz-logo.png',
-              color: Colors.white,
-              width: 300,
+            Opacity(
+              opacity: 0.6,
+              child: Image.asset(
+                'assets/images/quiz-logo.png',
+                width: 300,
+              ),
             ),
             const SizedBox(
               height: 30,
             ),
             const Text(
               'Learn Flutter Funny!',
-              style: TextStyle(fontSize: 18, color: Colors.white),
+              style: TextStyle(fontSize: 18, color: Colors.white70),
             ),
             const SizedBox(
               height: 30,
             ),
-            ElevatedButton.icon(
+            OutlinedButton.icon(
+              style: OutlinedButton.styleFrom(foregroundColor: Colors.white54),
               onPressed: () {},
               icon: const Icon(Icons.arrow_right_sharp),
               label: const Text(
